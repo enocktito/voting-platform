@@ -17,3 +17,15 @@ spec:
       containers:
       - image: dockersamples/examplevotingapp_worker
         name: worker
+        env:
+          - name: RD_URL
+            value: "redis"
+          - name: DB_PARAMS
+            value: "Server=db;Username=postgres;Password=postgres;"
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
