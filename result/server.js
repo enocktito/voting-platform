@@ -22,9 +22,9 @@ io.sockets.on('connection', function (socket) {
     socket.join(data.channel);
   });
 });
-
+var dbUri = process.env.DB_URI || 'postgres://postgres:postgres@db/postgres';
 var pool = new pg.Pool({
-  connectionString: 'postgres://postgres:postgres@db/postgres'
+  connectionString: dbUri
 });
 
 async.retry(
