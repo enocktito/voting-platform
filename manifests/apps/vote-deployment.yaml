@@ -15,14 +15,14 @@ spec:
         app: vote
     spec:
       containers:
-      - image: dockersamples/examplevotingapp_vote
+      - image: sedjro/voting-app:vote-1
         name: vote
         ports:
         - containerPort: 80
           name: vote
         env:
           - name: RD_URL
-            value: "redis"
+            value: "tf-redis-cluster.k3siua.clustercfg.eun1.cache.amazonaws.com"
         resources:
           requests:
             memory: "64Mi"

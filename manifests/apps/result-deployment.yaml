@@ -15,14 +15,14 @@ spec:
         app: result
     spec:
       containers:
-      - image: dockersamples/examplevotingapp_result
+      - image: sedjro/voting-app:result-1
         name: result
         ports:
         - containerPort: 80
           name: result
         env:
           - name: DB_URI
-            value: "postgres://postgres:postgres@db/postgres"
+            value: "postgres://postgres:lsDiizBorqJtmI4Y@eks-poc.cvtt5zpyjls7.eu-north-1.rds.amazonaws.com/postgres"
         resources:
           requests:
             memory: "64Mi"
@@ -30,4 +30,3 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
-            

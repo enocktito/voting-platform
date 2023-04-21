@@ -15,13 +15,13 @@ spec:
         app: worker
     spec:
       containers:
-      - image: dockersamples/examplevotingapp_worker
+      - image: sedjro/voting-app:worker-1
         name: worker
         env:
           - name: RD_URL
-            value: "redis"
+            value: "tf-redis-cluster.k3siua.clustercfg.eun1.cache.amazonaws.com"
           - name: DB_PARAMS
-            value: "Server=db;Username=postgres;Password=postgres;"
+            value: "Server=eks-poc.cvtt5zpyjls7.eu-north-1.rds.amazonaws.com;Username=postgres;Password=lsDiizBorqJtmI4Y;"
         resources:
           requests:
             memory: "64Mi"

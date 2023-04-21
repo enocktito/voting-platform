@@ -5,6 +5,7 @@
 services:
   vote:
     build: ./vote
+    image: sedjro/voting-app:vote-1
     # use python rather than gunicorn for local dev
     # command: python app.py
     # depends_on:
@@ -28,6 +29,7 @@ services:
 
   result:
     build: ./result
+    image: sedjro/voting-app:result-1
     # use nodemon rather than node for local dev
     # entrypoint: nodemon server.js
     # depends_on:
@@ -47,6 +49,7 @@ services:
   worker:
     build:
       context: ./worker
+    image: sedjro/voting-app:worker-1
     # depends_on:
     #   redis:
     #     condition: service_healthy 
