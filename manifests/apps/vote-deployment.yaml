@@ -5,7 +5,7 @@ metadata:
     app: vote
   name: vote
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: vote
@@ -17,12 +17,13 @@ spec:
       containers:
       - image: dockersamples/examplevotingapp_vote
         name: vote
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
           name: vote
         env:
-          - name: RD_URL
-            value: "redis"
+          - name: REDIS_CLUSTER_ENDPOINT
+            value: "xxx.xxx.clustercfg.eun1.cache.amazonaws.com"
         resources:
           requests:
             memory: "64Mi"

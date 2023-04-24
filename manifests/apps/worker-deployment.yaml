@@ -19,9 +19,9 @@ spec:
         name: worker
         env:
           - name: RD_URL
-            value: "redis"
+            value: "xxx.xxx.clustercfg.eun1.cache.amazonaws.com"
           - name: DB_PARAMS
-            value: "Server=db;Username=postgres;Password=postgres;"
+            value: "Server=eks-poc.url;Username=postgres;Password=postgres;"
         resources:
           requests:
             memory: "64Mi"

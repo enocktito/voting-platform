@@ -22,7 +22,7 @@ spec:
           name: result
         env:
           - name: DB_URI
-            value: "postgres://postgres:postgres@db/postgres"
+            value: "postgres://postgres:postgres@eks-poc.url/postgres"
         resources:
           requests:
             memory: "64Mi"
