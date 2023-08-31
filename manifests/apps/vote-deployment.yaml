@@ -15,7 +15,7 @@ spec:
         app: vote
     spec:
       containers:
-      - image: dockersamples/examplevotingapp_vote
+      - image: sedjro/voting-app:vote-1
         name: vote
         imagePullPolicy: Always
         ports:
